@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Fil-Am Healthcare Solutions | Talk to Our Recruitment Team</title>
+<meta name="description" content="Reach the Fil-Am Healthcare Solutions team with questions about candidate applications, employer partnerships, or general inquiries. U.S. and Iloilo offices, phone, and email listed.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { heading: ['Poppins','sans-serif'], body: ['Poppins','sans-serif'] },
+        colors: { navy: '#0B3B91', red: '#B91C1C', sky: '#4FA3FF' }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { font-family: 'Poppins', sans-serif; }
+  [id] { scroll-margin-top: 5.5rem; }
+
+  .glass-card {
+    background-color: rgba(255,255,255,0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.75);
+    box-shadow: 0 25px 50px -20px rgba(11,59,145,0.22);
+  }
+  .glass-dark {
+    background-color: rgba(11,59,145,0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .hover-lift { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease; }
+  .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 35px 65px -20px rgba(11,59,145,0.3); }
+  @media (prefers-reduced-motion: reduce) { .hover-lift:hover { transform: none; } }
+
+  .btn-press { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  .btn-press:hover { transform: translateY(-2px) scale(1.015); }
+  @media (prefers-reduced-motion: reduce) { .btn-press:hover { transform: none; } }
+
+  @keyframes blobFloat {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(18px,-26px) scale(1.06); }
+  }
+  .blob-float { animation: blobFloat 17s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .blob-float { animation: none; } }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition-property: opacity, transform;
+    transition-duration: .75s;
+    transition-timing-function: cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.revealed { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+  noscript .reveal, .no-js .reveal { opacity: 1; transform: none; }
+
+  #site-header { transition: padding .35s ease, background-color .35s ease, box-shadow .35s ease, border-color .35s ease; }
+
+  #mobile-menu { transition: opacity .3s ease, transform .3s ease; }
+  #mobile-menu.menu-closed { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu.menu-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+  ::selection { background: rgba(79,163,255,0.3); }
+
+  input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 2px solid #4FA3FF;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .grain { position: relative; }
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+</style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-navy focus:px-5 focus:py-3 focus:text-white focus:shadow-lg">Skip to main content</a>
+
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/40 bg-white/70 py-4 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+    <a href="../concept-2-growth.html" class="group flex items-center gap-3">
+      <img src="../assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-14 w-auto transition-transform group-hover:scale-105">
+    </a>
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+      <a href="../concept-2-growth.html" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Home</a>
+      <a href="../concept-2-growth.html#about" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">About</a>
+      <a href="healthcare-jobs.html" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Healthcare Jobs</a>
+      <a href="employer-inquiry.html" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Employers</a>
+      <a href="apply-now.html" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Candidates</a>
+      <a href="../concept-2-growth.html#services" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Services</a>
+      <a href="contact.html" aria-current="page" class="text-sm font-bold text-navy underline decoration-red decoration-2 underline-offset-8">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="apply-now.html" class="btn-press hidden items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-navy/25 cursor-pointer sm:inline-flex">
+        Apply Now
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button id="nav-toggle" type="button" class="flex h-11 w-11 items-center justify-center rounded-xl border border-navy/15 bg-white/70 text-navy cursor-pointer lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <svg id="icon-menu" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="menu-closed absolute inset-x-0 top-full mx-4 mt-2 rounded-3xl border border-white/60 bg-white/95 p-6 shadow-2xl backdrop-blur-lg lg:hidden">
+    <nav class="flex flex-col gap-1" aria-label="Mobile Primary">
+      <a href="../concept-2-growth.html" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Home</a>
+      <a href="../concept-2-growth.html#about" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">About</a>
+      <a href="healthcare-jobs.html" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Healthcare Jobs</a>
+      <a href="employer-inquiry.html" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Employers</a>
+      <a href="apply-now.html" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Candidates</a>
+      <a href="../concept-2-growth.html#services" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Services</a>
+      <a href="contact.html" aria-current="page" class="rounded-xl bg-navy/5 px-4 py-3 text-base font-bold text-navy">Contact</a>
+      <a href="apply-now.html" class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-base font-semibold text-white shadow-md cursor-pointer">Apply Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<section id="page-hero" class="relative overflow-hidden bg-white pb-16 pt-32 sm:pb-20 sm:pt-40">
+  <div class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-navy/25 blur-3xl blob-float" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-24 top-24 h-80 w-80 rounded-full bg-sky/25 blur-3xl blob-float" style="animation-delay:3s" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-red/20 blur-3xl blob-float" style="animation-delay:6s" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-4xl px-5 text-center sm:px-8 lg:px-10">
+    <nav class="reveal flex items-center justify-center gap-2 text-sm font-semibold text-slate-500" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2">
+        <li><a href="../concept-2-growth.html" class="hover:text-navy">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-navy" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+    <span class="reveal delay-100 mt-6 inline-flex items-center gap-2 rounded-full glass-card px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-navy">
+      <svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-2.5 2a12 12 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2c-9 0-16-7-16-16a2 2 0 0 1 2-2z"/></svg>
+      Get In Touch
+    </span>
+    <h1 class="reveal delay-150 mt-6 font-heading text-4xl font-bold leading-[1.12] text-navy sm:text-5xl">Let's Start the Conversation</h1>
+    <p class="reveal delay-200 mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-700">
+      Whether you're a healthcare professional exploring a career in the United States or a facility leader looking to solve a staffing shortage, our team is ready to help. Reach out below and a member of the Fil-Am Healthcare Solutions (FAHS) team will follow up promptly.
+    </p>
+  </div>
+</section>
+
+<section id="contact-details" class="relative overflow-hidden bg-stone-50 py-20 grain sm:py-24">
+  <div class="pointer-events-none absolute -left-20 top-10 h-80 w-80 rounded-full bg-navy/15 blur-3xl" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-red/15 blur-3xl" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+
+      <div class="reveal rounded-3xl bg-gradient-to-br from-navy via-sky to-red p-[2px] shadow-xl">
+        <div class="flex h-full flex-col rounded-[calc(1.5rem-2px)] bg-white/95 p-8 sm:p-10">
+          <h2 class="font-heading text-xl font-bold text-navy">Contact Information</h2>
+          <div class="mt-6 space-y-5 text-sm text-slate-700">
+            <div class="flex items-start gap-3">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 flex-shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <div>
+                <p class="font-semibold text-navy">US Office</p>
+                <p>1201 Harborview Plaza, Suite 400<br>Los Angeles, CA 90017</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 flex-shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <div>
+                <p class="font-semibold text-navy">Iloilo Office</p>
+                <p>[Street Address]<br>Iloilo City, Iloilo, Philippines</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-2.5 2a12 12 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2c-9 0-16-7-16-16a2 2 0 0 1 2-2z"/></svg>
+              <p>(213) 555-0148</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <p>hello@filamhealthcaresolutions.com</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <p>Mon&ndash;Fri, 8:00 AM&ndash;6:00 PM PST</p>
+            </div>
+          </div>
+
+          <div class="mt-8 space-y-3 border-t border-navy/10 pt-6">
+            <a href="apply-now.html" class="flex min-h-[44px] items-center justify-between gap-3 rounded-xl bg-navy/5 px-4 py-3 text-sm font-bold text-navy transition-colors hover:bg-navy/10 cursor-pointer">
+              Prefer to apply directly? Start your application
+              <svg viewBox="0 0 24 24" class="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="employer-inquiry.html" class="flex min-h-[44px] items-center justify-between gap-3 rounded-xl bg-red/10 px-4 py-3 text-sm font-bold text-red transition-colors hover:bg-red/20 cursor-pointer">
+              Hiring for your facility? Request talent
+              <svg viewBox="0 0 24 24" class="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal delay-150 rounded-3xl bg-gradient-to-br from-red via-sky to-navy p-[2px] shadow-xl">
+        <div class="h-full rounded-[calc(1.5rem-2px)] bg-white/95 p-8 sm:p-10">
+          <form id="contact-form" novalidate>
+            <h2 class="font-heading text-xl font-bold text-navy">Send Us a Message</h2>
+            <p class="mt-1.5 text-sm text-slate-600">General questions, candidate questions, employer partnerships &mdash; we read every message.</p>
+            <div class="mt-6 space-y-5">
+              <div>
+                <label for="gc-name" class="mb-1.5 block text-sm font-semibold text-slate-800">Name</label>
+                <input id="gc-name" name="name" type="text" required autocomplete="name" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="Your full name">
+              </div>
+              <div>
+                <label for="gc-email" class="mb-1.5 block text-sm font-semibold text-slate-800">Email</label>
+                <input id="gc-email" name="email" type="email" required autocomplete="email" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="you@email.com">
+              </div>
+              <div>
+                <label for="gc-subject" class="mb-1.5 block text-sm font-semibold text-slate-800">Subject</label>
+                <select id="gc-subject" name="subject" required class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white px-4 py-2.5 text-slate-900">
+                  <option value="">Select one</option>
+                  <option>General Inquiry</option>
+                  <option>Candidate Question</option>
+                  <option>Employer Partnership</option>
+                  <option>Press/Media</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="gc-message" class="mb-1.5 block text-sm font-semibold text-slate-800">Message</label>
+                <textarea id="gc-message" name="message" rows="5" required class="w-full rounded-xl border border-navy/15 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="Tell us a bit about what you need..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn-press mt-7 inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-navy/30 cursor-pointer sm:w-auto">
+              Send Message
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </form>
+          <div id="contact-success" class="hidden text-center" tabindex="-1">
+            <svg viewBox="0 0 24 24" class="mx-auto h-12 w-12 text-red" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+            <h3 class="mt-4 font-heading text-xl font-bold text-navy">Message Sent</h3>
+            <p class="mt-2 text-sm text-slate-700">Thank you for reaching out. Our team will respond within one business day.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="reach-us" class="relative overflow-hidden bg-white py-20 sm:py-24">
+  <div class="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-sky/15 blur-3xl" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="inline-flex items-center rounded-full bg-navy/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-navy">Other Ways to Reach Us</span>
+      <h2 class="mt-5 font-heading text-3xl font-bold text-navy sm:text-4xl">Looking for Something Specific?</h2>
+      <p class="mt-4 leading-relaxed text-slate-700">These direct paths connect you with the right team faster than a general message.</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+      <a href="apply-now.html" class="reveal hover-lift block rounded-3xl glass-card p-7 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="h-10 w-10 text-navy" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Ready to Apply</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">Skip the message and start your candidate application right away.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-navy">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a href="employer-inquiry.html" class="reveal delay-100 hover-lift block rounded-3xl glass-card p-7 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="h-10 w-10 text-red" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Hiring for Your Facility</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">Tell us your staffing needs and get matched with credentialed candidates.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-red">Request Talent <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a href="healthcare-jobs.html" class="reveal delay-200 hover-lift block rounded-3xl glass-card p-7 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="h-10 w-10 text-navy" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/><path d="M4 12h16"/></svg>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Browse Openings</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">Explore current nursing, caregiving, CNA, and allied health roles nationwide.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-navy">View Healthcare Jobs <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="relative overflow-hidden bg-navy py-16 text-white">
+  <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-sky/20 blur-3xl" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-red/20 blur-3xl" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href="../concept-2-growth.html" class="flex items-center gap-3">
+      <span class="inline-block rounded-xl bg-white p-2 shadow-md">
+        <img src="../assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-9 w-auto">
+      </span>
+        </a>
+        <p class="mt-5 text-sm leading-relaxed text-white/70">Connecting skilled Filipino healthcare professionals with trusted employers across the United States.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on Facebook" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M13.5 8.5H15V6h-1.8C11.6 6 10.5 7.2 10.5 9v2H9v3h1.5v6h3v-6H15l.5-3h-2V9c0-.3.2-.5.5-.5z"/></svg>
+          </a>
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on Instagram" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4c0-1.5 1-2.5 2.5-2.5S16 11.5 16 13v4M11 10v7"/></svg>
+          </a>
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on YouTube" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M10 9.5l6 2.5-6 2.5z" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="font-heading text-sm font-bold uppercase tracking-wide text-sky">Quick Links</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/75">
+          <li><a href="../concept-2-growth.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="meet-the-executive.html" class="hover:text-white">Meet the Executive</a></li>
+          <li><a href="resources.html" class="hover:text-white">Resources</a></li>
+          <li><a href="resources.html#job-fair" class="hover:text-white">Upcoming Job Fair</a></li>
+          <li><a href="employer-inquiry.html" class="hover:text-white">Employers</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-heading text-sm font-bold uppercase tracking-wide text-sky">Services</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/75">
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Nurse &amp; CNA Staffing</a></li>
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Caregiver Placement</a></li>
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Credentialing Support</a></li>
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Visa &amp; Immigration</a></li>
+          <li><a href="healthcare-jobs.html" class="hover:text-white">Healthcare Jobs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-heading text-sm font-bold uppercase tracking-wide text-sky">Legal</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/75">
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/15 pt-8 text-center text-xs text-white/60">
+      <p>&copy; <span id="year"></span> Fil-Am Healthcare Solutions. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var navToggle = document.getElementById('nav-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var iconMenu = document.getElementById('icon-menu');
+  var iconClose = document.getElementById('icon-close');
+
+  function closeMobileMenu() {
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('menu-open');
+    mobileMenu.classList.add('menu-closed');
+    iconMenu.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  }
+
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeMobileMenu();
+    } else {
+      navToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.remove('menu-closed');
+      mobileMenu.classList.add('menu-open');
+      iconMenu.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+    }
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(function (link) {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length > 1) {
+        var target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 12) {
+      header.classList.remove('py-4', 'bg-white/70');
+      header.classList.add('py-2.5', 'bg-white/90', 'shadow-md', 'border-white/60');
+    } else {
+      header.classList.remove('py-2.5', 'bg-white/90', 'shadow-md', 'border-white/60');
+      header.classList.add('py-4', 'bg-white/70');
+    }
+  });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('revealed'); });
+  }
+
+  function wireForm(formId, successId) {
+    var form = document.getElementById(formId);
+    var success = document.getElementById(successId);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.focus();
+    });
+  }
+  wireForm('contact-form', 'contact-success');
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>

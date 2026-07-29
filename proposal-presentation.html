@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Recruitment Platform Proposal | Fil-Am Healthcare Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Poppins', 'sans-serif'] },
+        colors: { navy: '#0B3B91', red: '#B91C1C', sky: '#4FA3FF' },
+      },
+    },
+  };
+</script>
+<style>
+  html, body { height: 100%; overscroll-behavior: none; }
+  body { font-family: 'Poppins', sans-serif; }
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; visibility: hidden;
+    transition: opacity .35s ease;
+  }
+  .slide.active { opacity: 1; pointer-events: auto; visibility: visible; }
+  @media (prefers-reduced-motion: reduce) { .slide { transition: none; } }
+  .slide-card {
+    width: min(1200px, 94vw);
+    height: min(720px, 88vh);
+    background: #fff;
+    border-radius: 1.75rem;
+    box-shadow: 0 40px 90px -30px rgba(11,59,145,0.35), 0 2px 10px rgba(0,0,0,0.06);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .frame-shell { border: 1px solid #E2E8F0; border-radius: 1.25rem; overflow: hidden; background: #fff; box-shadow: 0 20px 45px -20px rgba(11,59,145,0.25); }
+  .frame-bar { display:flex; align-items:center; gap:6px; padding:10px 14px; background:#F1F5F9; border-bottom:1px solid #E2E8F0; }
+  .frame-dot { width:9px; height:9px; border-radius:9999px; }
+  iframe.frame-embed { display:block; border:0; width: 100%; pointer-events: none; background:#fff; }
+  #nav-btn:focus-visible, #prev-btn:focus-visible, #next-btn:focus-visible, .dot-btn:focus-visible { outline: 3px solid #4FA3FF; outline-offset: 3px; }
+</style>
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased">
+
+<div class="fixed inset-x-0 top-0 z-30 h-1.5 bg-slate-200">
+  <div id="progress-bar" class="h-full bg-gradient-to-r from-navy to-red transition-all duration-300" style="width:8.33%"></div>
+</div>
+
+<main id="stage" class="relative h-screen w-full pt-6 pb-28">
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide active" data-slide="1">
+    <div class="slide-card flex flex-col items-center justify-center px-10 text-center sm:px-20">
+      <img src="assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-20 w-auto sm:h-24">
+      <p class="mt-10 text-sm font-bold uppercase tracking-[0.25em] text-red">Project Proposal</p>
+      <h1 class="mt-5 max-w-3xl font-sans text-4xl font-extrabold leading-tight text-navy sm:text-5xl">Custom Recruitment Platform Proposal</h1>
+      <p class="mt-8 text-lg text-slate-500">Prepared for</p>
+      <p class="mt-1 text-2xl font-bold text-slate-900">FilAm Healthcare Solution</p>
+      <div class="mt-8 h-px w-24 bg-slate-200"></div>
+      <p class="mt-8 text-lg text-slate-500">Presented by</p>
+      <p class="mt-1 text-2xl font-bold text-slate-900">Jhon Rhovic Lontoc</p>
+      <p class="mt-10 rounded-full bg-navy/5 px-6 py-2.5 text-base font-semibold text-navy">Custom Website + Recruitment Management Platform</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: PROJECT OVERVIEW -->
+  <section class="slide" data-slide="2">
+    <div class="slide-card flex flex-col justify-center px-10 py-12 sm:px-20">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Project Overview</p>
+      <h2 class="mt-3 font-sans text-3xl font-extrabold text-navy sm:text-4xl">This Isn't Just a Company Website</h2>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">It's a complete recruitment platform built to help FilAm Healthcare Solution do more than exist online &mdash; it helps you actively grow.</p>
+      <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div class="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy/10 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <div><p class="font-bold text-slate-900">Attract Healthcare Professionals</p><p class="text-sm text-slate-500">A premium first impression for every candidate.</p></div>
+        </div>
+        <div class="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red/10 text-red"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><p class="font-bold text-slate-900">Receive Applications Online</p><p class="text-sm text-slate-500">No more paperwork or lost emails.</p></div>
+        </div>
+        <div class="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky/15 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></span>
+          <div><p class="font-bold text-slate-900">Organize Applicants</p><p class="text-sm text-slate-500">Every candidate in one clear, searchable place.</p></div>
+        </div>
+        <div class="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy/10 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <div><p class="font-bold text-slate-900">Manage Recruitment</p><p class="text-sm text-slate-500">Track every applicant from first click to hire.</p></div>
+        </div>
+        <div class="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red/10 text-red"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 8.3l7-.8z"/></svg></span>
+          <div><p class="font-bold text-slate-900">Improve Company Branding</p><p class="text-sm text-slate-500">Look as credible as the hospitals you serve.</p></div>
+        </div>
+        <div class="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky/15 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span>
+          <div><p class="font-bold text-slate-900">Increase Hiring Efficiency</p><p class="text-sm text-slate-500">Fill roles faster with less manual effort.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: PUBLIC WEBSITE -->
+  <section class="slide" data-slide="3">
+    <div class="slide-card flex flex-col px-10 py-10 sm:px-16">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Public Website</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">A Premium Front Door for FilAm</h2>
+      <div class="mt-6 grid flex-1 grid-cols-1 gap-8 lg:grid-cols-[1.5fr_1fr]">
+        <div class="frame-shell flex flex-col">
+          <div class="frame-bar"><span class="frame-dot bg-red/60"></span><span class="frame-dot bg-amber-400/70"></span><span class="frame-dot bg-emerald-400/70"></span><span class="ml-2 text-xs font-medium text-slate-500">filamhealthcaresolutions.com</span></div>
+          <div class="relative flex-1 overflow-hidden bg-white">
+            <iframe class="frame-embed" style="height:900px; width:1440px; transform:scale(0.446); transform-origin: top left;" src="concept-2-growth.html" title="Homepage preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center gap-3">
+          <a href="concept-2-growth.html" target="_blank" rel="noopener noreferrer" class="mb-2 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-navy px-6 text-base font-bold text-white shadow-lg shadow-navy/30 cursor-pointer">
+            Open the Full Website
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+          </a>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Premium UI Design</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Mobile Responsive</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Professional Branding</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Healthcare Recruitment Focus</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Easy Navigation</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Application Forms</span></p>
+          <p class="flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">SEO Ready</span></p>
+          <p class="mt-4 text-sm text-slate-500">Includes dedicated About, Services, Resources, and Contact pages &mdash; not just a single scrolling page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: APPLICANT DASHBOARD -->
+  <section class="slide" data-slide="4">
+    <div class="slide-card flex flex-col px-10 py-10 sm:px-16">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Applicant Dashboard</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">Every Candidate, Organized</h2>
+      <div class="mt-6 grid flex-1 grid-cols-1 gap-8 lg:grid-cols-[1.5fr_1fr]">
+        <div class="frame-shell flex flex-col">
+          <div class="frame-bar"><span class="frame-dot bg-red/60"></span><span class="frame-dot bg-amber-400/70"></span><span class="frame-dot bg-emerald-400/70"></span><span class="ml-2 text-xs font-medium text-slate-500">Applicant Management &mdash; Live Preview</span></div>
+          <div class="relative flex-1 overflow-hidden bg-white">
+            <iframe class="frame-embed" style="height:820px; width:1440px; transform:scale(0.446); transform-origin: top left;" src="dashboard-mockup.html" title="Applicant dashboard preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center gap-3">
+          <a href="dashboard-mockup.html" target="_blank" rel="noopener noreferrer" class="mb-2 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-navy px-6 text-base font-bold text-white shadow-lg shadow-navy/30 cursor-pointer">
+            Open the Full Dashboard
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+          </a>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-navy" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Candidate Profiles</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-navy" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Application Status Tracking</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-navy" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Resume Upload</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-navy" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Search</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-navy" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Filters by Role &amp; Status</span></p>
+          <p class="flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-navy" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">User-Friendly Interface</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: ADMIN DASHBOARD -->
+  <section class="slide" data-slide="5">
+    <div class="slide-card flex flex-col px-10 py-10 sm:px-16">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Admin Dashboard</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">Full Control for Your Recruiting Team</h2>
+      <p class="mt-1 text-sm text-slate-500">The same Applicant Management System, from the administrator's point of view.</p>
+      <div class="mt-6 grid flex-1 grid-cols-1 gap-8 lg:grid-cols-[1.5fr_1fr]">
+        <div class="frame-shell flex flex-col">
+          <div class="frame-bar"><span class="frame-dot bg-red/60"></span><span class="frame-dot bg-amber-400/70"></span><span class="frame-dot bg-emerald-400/70"></span><span class="ml-2 text-xs font-medium text-slate-500">Admin Controls &mdash; Live Preview</span></div>
+          <div class="relative flex-1 overflow-hidden bg-white">
+            <iframe class="frame-embed" style="height:820px; width:1440px; transform:scale(0.446); transform-origin: top left;" src="dashboard-mockup.html" title="Admin dashboard preview" loading="lazy" tabindex="-1"></iframe>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center gap-3">
+          <a href="dashboard-mockup.html" target="_blank" rel="noopener noreferrer" class="mb-2 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-navy px-6 text-base font-bold text-white shadow-lg shadow-navy/30 cursor-pointer">
+            Open the Full Dashboard
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+          </a>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Applicant Management</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Search &amp; Filters</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Status Tracking</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Dashboard Analytics</span></p>
+          <p class="mb-1 flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Recruiter Workflow</span></p>
+          <p class="flex items-center gap-2 text-slate-800"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span class="font-semibold">Candidate Database</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: WHY THIS PLATFORM MATTERS -->
+  <section class="slide" data-slide="6">
+    <div class="slide-card flex flex-col justify-center px-10 py-12 sm:px-20">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Why This Platform Matters</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">Real Benefits, Every Day</h2>
+      <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div class="flex items-center gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy/10 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><p class="text-lg font-semibold text-slate-800">Reduce manual work</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red/10 text-red"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span><p class="text-lg font-semibold text-slate-800">Faster hiring</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky/15 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 8.3l7-.8z"/></svg></span><p class="text-lg font-semibold text-slate-800">Professional image</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy/10 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></span><p class="text-lg font-semibold text-slate-800">Centralized applicant database</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red/10 text-red"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span><p class="text-lg font-semibold text-slate-800">Better applicant experience</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky/15 text-navy"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16h16M8 15l3-4 3 3 4-6"/></svg></span><p class="text-lg font-semibold text-slate-800">Scalable recruitment process</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: MARKET COMPARISON -->
+  <section class="slide" data-slide="7">
+    <div class="slide-card flex flex-col px-10 py-10 sm:px-16">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Market Comparison</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">What Platforms Like This Usually Cost</h2>
+      <div class="mt-6 grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex flex-col rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Basic Business Website</p>
+          <p class="mt-2 font-sans text-2xl font-extrabold text-slate-800">$800&ndash;$2,000</p>
+          <ul class="mt-3 space-y-1.5 text-sm text-slate-600">
+            <li>Company pages</li><li>Contact form</li><li>Basic design</li>
+          </ul>
+        </div>
+        <div class="flex flex-col rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Custom Recruitment Website</p>
+          <p class="mt-2 font-sans text-2xl font-extrabold text-slate-800">$3,000&ndash;$5,000+</p>
+          <ul class="mt-3 space-y-1.5 text-sm text-slate-600">
+            <li>Custom UI</li><li>Candidate portal</li><li>Job applications</li><li>Responsive design</li><li>Database</li><li>Employer branding</li>
+          </ul>
+        </div>
+        <div class="flex flex-col rounded-2xl border-2 border-navy bg-navy/[0.03] p-5">
+          <p class="text-xs font-bold uppercase tracking-wide text-navy">Recruitment + Applicant Tracking</p>
+          <p class="mt-2 font-sans text-2xl font-extrabold text-navy">$5,000&ndash;$15,000+</p>
+          <ul class="mt-3 space-y-1.5 text-sm text-slate-700">
+            <li>Applicant dashboard</li><li>Admin dashboard</li><li>Candidate management</li><li>Resume upload</li><li>Status tracking</li><li>Search &amp; filters</li>
+          </ul>
+          <p class="mt-3 text-xs font-bold text-navy">&larr; Closest to what you're receiving</p>
+        </div>
+        <div class="flex flex-col rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Enterprise Platform</p>
+          <p class="mt-2 font-sans text-2xl font-extrabold text-slate-800">$15,000&ndash;$30,000+</p>
+          <ul class="mt-3 space-y-1.5 text-sm text-slate-600">
+            <li>Full ATS &amp; CRM</li><li>Integrations</li><li>Automation</li><li>Analytics</li><li>Multi-user roles</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">Industry pricing for custom recruitment platforms with applicant tracking commonly falls within these ranges, increasing with development complexity.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: SIMILAR PLATFORMS -->
+  <section class="slide" data-slide="8">
+    <div class="slide-card flex flex-col justify-center px-10 py-12 sm:px-20">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Similar Platforms in the Market</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">You're in Good Company</h2>
+      <p class="mt-3 max-w-2xl text-slate-600">These are subscription-based recruitment systems with applicant tracking, dashboards, automation, and hiring workflows &mdash; the same category of solution your custom platform is comparable to.</p>
+      <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 p-5"><p class="font-sans text-xl font-extrabold text-navy">Workable</p><p class="mt-1 text-sm text-slate-600">All-in-one hiring &amp; applicant tracking software.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-5"><p class="font-sans text-xl font-extrabold text-navy">Zoho Recruit</p><p class="mt-1 text-sm text-slate-600">Cloud recruitment platform for staffing agencies.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-5"><p class="font-sans text-xl font-extrabold text-navy">Greenhouse</p><p class="mt-1 text-sm text-slate-600">Enterprise hiring &amp; onboarding platform.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-5"><p class="font-sans text-xl font-extrabold text-navy">Lever</p><p class="mt-1 text-sm text-slate-600">Talent acquisition suite with CRM features.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-5 sm:col-span-2"><p class="font-sans text-xl font-extrabold text-navy">iCIMS</p><p class="mt-1 text-sm text-slate-600">Large-scale enterprise talent cloud platform.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: WHAT YOU'RE RECEIVING -->
+  <section class="slide" data-slide="9">
+    <div class="slide-card flex flex-col justify-center px-10 py-12 sm:px-20">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">What You're Receiving</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">Everything Included</h2>
+      <div class="mt-8 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2">
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Premium Company Website</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Responsive Design</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Applicant Portal</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Admin Dashboard</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Applicant Database</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Candidate Tracking</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Search &amp; Filters</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Professional Branding</p>
+        <p class="flex items-center gap-3 text-lg text-slate-800"><svg viewBox="0 0 24 24" class="h-6 w-6 shrink-0 text-red" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Scalable Platform</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: INVESTMENT -->
+  <section class="slide" data-slide="10">
+    <div class="slide-card flex flex-col items-center justify-center px-10 py-12 text-center sm:px-20">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Investment</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">A Fair, Transparent Price</h2>
+      <p class="mt-6 text-slate-500">Regular project rate</p>
+      <p class="mt-1 font-sans text-3xl font-bold text-slate-400 line-through">$3,000</p>
+      <p class="mt-6 text-lg font-semibold text-slate-600">Your Special Project Investment</p>
+      <p class="mt-2 font-sans text-6xl font-extrabold text-navy sm:text-7xl">$2,000</p>
+      <p class="mt-6 inline-flex items-center gap-2 rounded-full bg-red/10 px-6 py-2.5 text-base font-bold text-red">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 8.3l7-.8z"/></svg>
+        You Save $1,000
+      </p>
+      <p class="mt-8 max-w-xl text-sm text-slate-500">Custom recruitment platforms with applicant tracking commonly range from $3,000 to $15,000+ depending on complexity. This rate is offered specifically for FilAm Healthcare Solution.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: WHY THIS IS A SMART INVESTMENT -->
+  <section class="slide" data-slide="11">
+    <div class="slide-card flex flex-col justify-center px-10 py-12 sm:px-20">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-red">Why This Is a Smart Investment</p>
+      <h2 class="mt-2 font-sans text-3xl font-extrabold text-navy sm:text-4xl">More Than a Website</h2>
+      <div class="mt-10 space-y-6">
+        <div class="flex items-center gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-navy/10 text-navy"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><p class="text-lg font-semibold text-slate-800">Builds trust with applicants</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red/10 text-red"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span><p class="text-lg font-semibold text-slate-800">Improves recruiter productivity</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky/15 text-navy"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></span><p class="text-lg font-semibold text-slate-800">Centralizes candidate information</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-navy/10 text-navy"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><p class="text-lg font-semibold text-slate-800">Saves administrative time</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red/10 text-red"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 8.3l7-.8z"/></svg></span><p class="text-lg font-semibold text-slate-800">Creates a professional digital presence</p></div>
+        <div class="flex items-center gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky/15 text-navy"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16h16M8 15l3-4 3 3 4-6"/></svg></span><p class="text-lg font-semibold text-slate-800">Supports future growth</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12: THANK YOU -->
+  <section class="slide" data-slide="12">
+    <div class="slide-card flex flex-col items-center justify-center px-10 py-12 text-center sm:px-20">
+      <img src="assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-16 w-auto">
+      <h2 class="mt-8 font-sans text-4xl font-extrabold text-navy">Thank You</h2>
+      <p class="mt-6 max-w-xl text-xl leading-relaxed text-slate-600">&ldquo;We look forward to helping FilAm Healthcare Solution build a modern, professional recruitment platform.&rdquo;</p>
+      <div class="mt-10 h-px w-24 bg-slate-200"></div>
+      <p class="mt-10 text-lg font-bold text-slate-900">Jhon Rhovic Lontoc</p>
+      <p class="mt-1 text-slate-500">jhon@wemanagementservices.com</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- NAVIGATION (large, simple, elder-friendly) -->
+<div class="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-4xl items-center justify-between gap-4 px-6 py-4">
+    <button id="prev-btn" type="button" class="flex min-h-[56px] min-w-[130px] items-center justify-center gap-2 rounded-full border-2 border-navy px-6 text-lg font-bold text-navy cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
+      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      Back
+    </button>
+    <p class="text-base font-semibold text-slate-600">Slide <span id="slide-current">1</span> of <span id="slide-total">12</span></p>
+    <button id="next-btn" type="button" class="flex min-h-[56px] min-w-[130px] items-center justify-center gap-2 rounded-full bg-navy px-6 text-lg font-bold text-white shadow-lg shadow-navy/30 cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
+      Next
+      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var slides = Array.from(document.querySelectorAll('.slide'));
+  var total = slides.length;
+  var current = 1;
+  var prevBtn = document.getElementById('prev-btn');
+  var nextBtn = document.getElementById('next-btn');
+  var currentLabel = document.getElementById('slide-current');
+  var progressBar = document.getElementById('progress-bar');
+  document.getElementById('slide-total').textContent = total;
+
+  function render() {
+    slides.forEach(function (s) {
+      s.classList.toggle('active', Number(s.dataset.slide) === current);
+    });
+    currentLabel.textContent = current;
+    progressBar.style.width = (current / total * 100) + '%';
+    prevBtn.disabled = current === 1;
+    nextBtn.disabled = current === total;
+    nextBtn.querySelector('svg') && (nextBtn.innerHTML = current === total
+      ? 'Done'
+      : 'Next <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>');
+  }
+
+  prevBtn.addEventListener('click', function () { if (current > 1) { current--; render(); } });
+  nextBtn.addEventListener('click', function () { if (current < total) { current++; render(); } });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { if (current < total) { current++; render(); } }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { if (current > 1) { current--; render(); } }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

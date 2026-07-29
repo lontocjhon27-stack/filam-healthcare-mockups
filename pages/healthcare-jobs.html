@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthcare Jobs | Fil-Am Healthcare Solutions</title>
+<meta name="description" content="Browse current healthcare job openings for Filipino nurses, caregivers, CNAs, and allied health professionals at hospitals, skilled nursing facilities, and home health agencies across the United States.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { heading: ['Poppins','sans-serif'], body: ['Poppins','sans-serif'] },
+        colors: { navy: '#0B3B91', red: '#B91C1C', sky: '#4FA3FF' }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { font-family: 'Poppins', sans-serif; }
+  [id] { scroll-margin-top: 5.5rem; }
+
+  .glass-card {
+    background-color: rgba(255,255,255,0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.75);
+    box-shadow: 0 25px 50px -20px rgba(11,59,145,0.22);
+  }
+  .glass-dark {
+    background-color: rgba(11,59,145,0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .hover-lift { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease; }
+  .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 35px 65px -20px rgba(11,59,145,0.3); }
+  @media (prefers-reduced-motion: reduce) { .hover-lift:hover { transform: none; } }
+
+  .btn-press { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  .btn-press:hover { transform: translateY(-2px) scale(1.015); }
+  @media (prefers-reduced-motion: reduce) { .btn-press:hover { transform: none; } }
+
+  @keyframes blobFloat {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(18px,-26px) scale(1.06); }
+  }
+  .blob-float { animation: blobFloat 17s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .blob-float { animation: none; } }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition-property: opacity, transform;
+    transition-duration: .75s;
+    transition-timing-function: cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.revealed { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+  noscript .reveal, .no-js .reveal { opacity: 1; transform: none; }
+
+  #site-header { transition: padding .35s ease, background-color .35s ease, box-shadow .35s ease, border-color .35s ease; }
+
+  #mobile-menu { transition: opacity .3s ease, transform .3s ease; }
+  #mobile-menu.menu-closed { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu.menu-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+  ::selection { background: rgba(79,163,255,0.3); }
+
+  input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 2px solid #4FA3FF;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .filter-pill[aria-pressed="true"] {
+    background-color: #0B3B91;
+    color: #ffffff;
+    border-color: #0B3B91;
+    box-shadow: 0 10px 25px -10px rgba(11,59,145,0.5);
+  }
+  .filter-pill[aria-pressed="false"] {
+    background-color: rgba(255,255,255,0.7);
+    color: #0B3B91;
+  }
+
+  .grain { position: relative; }
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+</style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-navy focus:px-5 focus:py-3 focus:text-white focus:shadow-lg">Skip to main content</a>
+
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/40 bg-white/70 py-4 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+    <a href="../concept-2-growth.html" class="group flex items-center gap-3">
+      <img src="../assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-14 w-auto transition-transform group-hover:scale-105">
+    </a>
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+      <a href="../concept-2-growth.html" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Home</a>
+      <a href="../concept-2-growth.html#about" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">About</a>
+      <a href="healthcare-jobs.html" aria-current="page" class="text-sm font-semibold text-navy transition-colors hover:text-navy">Healthcare Jobs</a>
+      <a href="../concept-2-growth.html#employer-solutions" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Employers</a>
+      <a href="../concept-2-growth.html#candidates" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Candidates</a>
+      <a href="../concept-2-growth.html#services" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Services</a>
+      <a href="contact.html" class="text-sm font-semibold text-slate-700 transition-colors hover:text-navy">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="apply-now.html" class="btn-press hidden items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-navy/25 cursor-pointer sm:inline-flex">
+        Apply Now
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button id="nav-toggle" type="button" class="flex h-11 w-11 items-center justify-center rounded-xl border border-navy/15 bg-white/70 text-navy cursor-pointer lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <svg id="icon-menu" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="menu-closed absolute inset-x-0 top-full mx-4 mt-2 rounded-3xl border border-white/60 bg-white/95 p-6 shadow-2xl backdrop-blur-lg lg:hidden">
+    <nav class="flex flex-col gap-1" aria-label="Mobile Primary">
+      <a href="../concept-2-growth.html" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Home</a>
+      <a href="../concept-2-growth.html#about" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">About</a>
+      <a href="healthcare-jobs.html" aria-current="page" class="rounded-xl bg-navy/5 px-4 py-3 text-base font-semibold text-navy">Healthcare Jobs</a>
+      <a href="../concept-2-growth.html#employer-solutions" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Employers</a>
+      <a href="../concept-2-growth.html#candidates" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Candidates</a>
+      <a href="../concept-2-growth.html#services" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Services</a>
+      <a href="contact.html" class="rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-navy/5 hover:text-navy">Contact</a>
+      <a href="apply-now.html" class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-base font-semibold text-white shadow-md cursor-pointer">Apply Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<section class="relative overflow-hidden bg-white pb-16 pt-32 sm:pb-20 sm:pt-40">
+  <div class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-navy/25 blur-3xl blob-float" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-24 top-24 h-80 w-80 rounded-full bg-sky/25 blur-3xl blob-float" style="animation-delay:3s" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-red/20 blur-3xl blob-float" style="animation-delay:6s" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <nav aria-label="Breadcrumb" class="reveal flex items-center gap-2 text-sm font-semibold text-slate-500">
+      <a href="../concept-2-growth.html" class="hover:text-navy">Home</a>
+      <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      <span class="text-navy" aria-current="page">Healthcare Jobs</span>
+    </nav>
+
+    <div class="mt-8 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-10">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 rounded-full glass-card px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-navy">
+          <svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Current Openings
+        </span>
+        <h1 class="mt-6 font-heading text-4xl font-bold leading-[1.12] text-navy sm:text-5xl">
+          Explore Healthcare Careers Across America
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-700">
+          From acute care hospitals to home health agencies, our partner facilities are hiring skilled nurses, caregivers, CNAs, and allied health professionals nationwide. Search current openings below, or apply anyway and let a Fil-Am Healthcare Solutions (FAHS) case manager match you personally.
+        </p>
+      </div>
+
+      <div class="reveal delay-200">
+        <div class="relative mx-auto h-72 max-w-md sm:h-96 lg:h-[26rem] lg:max-w-none">
+          <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1600&q=80" alt="Exterior of a modern U.S. hospital campus with a glass entrance, representative of the facilities FAHS-placed professionals join" class="absolute inset-0 h-full w-full rounded-[2rem] object-cover shadow-2xl ring-1 ring-white/60">
+          <div class="absolute -left-4 bottom-6 max-w-[220px] rounded-2xl glass-card p-4 sm:-left-8 sm:bottom-8 sm:p-5">
+            <p class="font-heading text-2xl font-bold text-navy">100+</p>
+            <p class="mt-0.5 text-xs font-semibold uppercase tracking-wide text-slate-600">Partner facilities hiring nationwide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal delay-300 mt-14">
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 rounded-2xl glass-card px-6 py-5 text-center text-sm font-semibold text-slate-700 sm:justify-between">
+        <span>12 Featured Roles Below</span>
+        <span class="hidden h-1.5 w-1.5 rounded-full bg-navy/30 sm:inline-block" aria-hidden="true"></span>
+        <span>7 States Represented</span>
+        <span class="hidden h-1.5 w-1.5 rounded-full bg-navy/30 sm:inline-block" aria-hidden="true"></span>
+        <span>New Roles Posted Weekly</span>
+        <span class="hidden h-1.5 w-1.5 rounded-full bg-navy/30 sm:inline-block" aria-hidden="true"></span>
+        <span>Zero Cost to Candidates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="job-listings" class="relative overflow-hidden bg-stone-50 py-20 grain sm:py-24">
+  <div class="pointer-events-none absolute -left-24 top-1/3 h-80 w-80 rounded-full bg-navy/10 blur-3xl" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+    <div class="reveal rounded-3xl glass-card p-6 sm:p-8">
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-[1fr_auto]">
+        <div>
+          <label for="job-search" class="mb-1.5 block text-sm font-semibold text-slate-800">Search by keyword</label>
+          <div class="relative">
+            <svg viewBox="0 0 24 24" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input id="job-search" type="text" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 py-2.5 pl-11 pr-4 text-slate-900 placeholder:text-slate-400" placeholder="Job title, facility, or keyword">
+          </div>
+        </div>
+        <div>
+          <label for="job-state" class="mb-1.5 block text-sm font-semibold text-slate-800">Location</label>
+          <select id="job-state" class="min-h-[44px] w-full rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 sm:w-56">
+            <option value="all">All States</option>
+            <option value="AZ">Arizona</option>
+            <option value="CA">California</option>
+            <option value="FL">Florida</option>
+            <option value="IL">Illinois</option>
+            <option value="NJ">New Jersey</option>
+            <option value="OH">Ohio</option>
+            <option value="TX">Texas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex flex-wrap gap-3" role="group" aria-label="Filter jobs by category">
+          <button type="button" class="filter-pill min-h-[44px] rounded-full border border-navy/15 px-5 text-sm font-semibold transition-colors cursor-pointer" data-filter="all" aria-pressed="true">All Openings</button>
+          <button type="button" class="filter-pill min-h-[44px] rounded-full border border-navy/15 px-5 text-sm font-semibold transition-colors cursor-pointer" data-filter="nursing" aria-pressed="false">Nursing</button>
+          <button type="button" class="filter-pill min-h-[44px] rounded-full border border-navy/15 px-5 text-sm font-semibold transition-colors cursor-pointer" data-filter="caregiving" aria-pressed="false">Caregiving</button>
+          <button type="button" class="filter-pill min-h-[44px] rounded-full border border-navy/15 px-5 text-sm font-semibold transition-colors cursor-pointer" data-filter="cna" aria-pressed="false">CNA</button>
+          <button type="button" class="filter-pill min-h-[44px] rounded-full border border-navy/15 px-5 text-sm font-semibold transition-colors cursor-pointer" data-filter="allied" aria-pressed="false">Allied Health</button>
+        </div>
+        <button id="clear-filters" type="button" class="inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">
+          Clear Filters
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m-9 0v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <p id="results-count" class="reveal mt-8 text-sm font-semibold text-slate-600" aria-live="polite">Showing all 12 openings</p>
+
+    <div id="jobs-grid" class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article class="job-card reveal hover-lift rounded-3xl glass-card p-7" data-category="nursing" data-state="FL" data-search="registered nurse intensive care unit icu harborview regional hospital tampa florida acute care hospital full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Nursing</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Registered Nurse &ndash; Intensive Care Unit</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Harborview Regional Hospital &middot; Acute Care Hospital</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Tampa, FL</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Provide critical care to high-acuity patients in a 32-bed ICU known for its nurse residency program and low turnover. Visa sponsorship available for internationally educated nurses.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-100 hover-lift rounded-3xl glass-card p-7" data-category="nursing" data-state="CA" data-search="registered nurse medical-surgical unit meridian valley medical center sacramento california acute care hospital full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Nursing</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Registered Nurse &ndash; Medical-Surgical Unit</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Meridian Valley Medical Center &middot; Acute Care Hospital</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Sacramento, CA</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Deliver high-quality med-surg care in a 120-bed hospital with strong mentorship support and a favorable day-shift patient ratio.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-200 hover-lift rounded-3xl glass-card p-7" data-category="nursing" data-state="OH" data-search="registered nurse emergency department er northgate community hospital columbus ohio acute care hospital full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Nursing</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Registered Nurse &ndash; Emergency Department</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Northgate Community Hospital &middot; Acute Care Hospital</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Columbus, OH</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Join a fast-paced 40-bed emergency department serving a growing suburban community, with cross-training in triage and trauma response.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal hover-lift rounded-3xl glass-card p-7" data-category="nursing" data-state="FL" data-search="registered nurse operating room or bayshore general hospital jacksonville florida acute care hospital contract">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Nursing</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Registered Nurse &ndash; Operating Room</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Bayshore General Hospital &middot; Acute Care Hospital</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Jacksonville, FL</p>
+        <span class="mt-3 inline-block rounded-full bg-sky/10 px-3 py-1 text-xs font-bold text-sky">Contract</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Support a 10-suite surgical department handling orthopedic, general, and cardiovascular cases on a 13-week contract with possible extension.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-100 hover-lift rounded-3xl glass-card p-7" data-category="nursing" data-state="TX" data-search="licensed practical nurse lpn cedar hill skilled nursing dallas texas skilled nursing facility full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Nursing</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Licensed Practical Nurse</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Cedar Hill Skilled Nursing &middot; Skilled Nursing Facility</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Dallas, TX</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Administer medications and coordinate resident care plans in a family-owned facility that pairs new LPNs with a clinical mentor.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-200 hover-lift rounded-3xl glass-card p-7" data-category="cna" data-state="NJ" data-search="certified nursing assistant memory care magnolia springs assisted living newark new jersey full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">CNA</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Certified Nursing Assistant &ndash; Memory Care</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Magnolia Springs Assisted Living &middot; Assisted Living Community</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Newark, NJ</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Support residents living with Alzheimer's and dementia in a specialized memory care wing with a consistent, low staff-to-resident ratio.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal hover-lift rounded-3xl glass-card p-7" data-category="cna" data-state="TX" data-search="certified nursing assistant skilled nursing cedar hill dallas texas part-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">CNA</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Certified Nursing Assistant &ndash; Skilled Nursing</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Cedar Hill Skilled Nursing &middot; Skilled Nursing Facility</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Dallas, TX</p>
+        <span class="mt-3 inline-block rounded-full bg-navy/10 px-3 py-1 text-xs font-bold text-navy">Part-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Assist residents with daily living activities on evening shift, with flexible scheduling for candidates pursuing continuing education.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-100 hover-lift rounded-3xl glass-card p-7" data-category="caregiving" data-state="IL" data-search="home health caregiver willow creek chicago illinois home health agency full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Caregiving</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Home Health Caregiver</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Willow Creek Home Health &middot; Home Health Agency</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Chicago, IL</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Provide one-on-one, in-home support to elderly clients across the Chicago metro area, with mileage reimbursement and flexible routing.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-200 hover-lift rounded-3xl glass-card p-7" data-category="caregiving" data-state="CA" data-search="live-in caregiver compass family home care san diego california contract">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Caregiving</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Live-In Caregiver</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Compass Family Home Care &middot; Home Care Agency</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>San Diego, CA</p>
+        <span class="mt-3 inline-block rounded-full bg-sky/10 px-3 py-1 text-xs font-bold text-sky">Contract</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Support a single client with daily living needs in a warm household setting, with room and board included for the placement.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal hover-lift rounded-3xl glass-card p-7" data-category="allied" data-state="AZ" data-search="physical therapy assistant pta sunrise rehabilitation center phoenix arizona outpatient rehabilitation center full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Allied Health</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Physical Therapy Assistant</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Sunrise Rehabilitation Center &middot; Outpatient Rehabilitation Center</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Phoenix, AZ</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Help patients regain mobility and independence after surgery or injury in a modern outpatient rehab center with a collaborative therapy team.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-100 hover-lift rounded-3xl glass-card p-7" data-category="allied" data-state="OH" data-search="respiratory therapist northgate community hospital columbus ohio acute care hospital full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Allied Health</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Respiratory Therapist</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Northgate Community Hospital &middot; Acute Care Hospital</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Columbus, OH</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Manage ventilator care and pulmonary treatment plans across medical-surgical and critical care units in a 200-bed community hospital.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="job-card reveal delay-200 hover-lift rounded-3xl glass-card p-7" data-category="allied" data-state="FL" data-search="medical technologist bayshore general hospital jacksonville florida acute care hospital laboratory full-time">
+        <span class="inline-flex items-center rounded-full bg-navy/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-navy">Allied Health</span>
+        <h3 class="mt-4 font-heading text-lg font-bold text-navy">Medical Technologist</h3>
+        <p class="mt-1 text-sm font-semibold text-slate-600">Bayshore General Hospital &middot; Acute Care Hospital</p>
+        <p class="mt-3 flex items-center gap-2 text-sm text-slate-600"><svg viewBox="0 0 24 24" class="h-4 w-4 text-red" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Jacksonville, FL</p>
+        <span class="mt-3 inline-block rounded-full bg-red/10 px-3 py-1 text-xs font-bold text-red">Full-Time</span>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">Perform diagnostic laboratory testing in a fast-paced hospital lab supporting emergency, surgical, and inpatient care teams.</p>
+        <a href="apply-now.html" class="mt-5 inline-flex min-h-[44px] items-center gap-1.5 text-sm font-bold text-navy cursor-pointer">Apply Now <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+    </div>
+
+    <p id="no-jobs" class="hidden mt-10 text-center text-sm font-semibold text-slate-500">No openings currently match your search &mdash; try a different keyword, category, or state, or apply anyway and we'll match you personally.</p>
+  </div>
+</section>
+
+<section id="why-us" class="relative overflow-hidden bg-white py-20 sm:py-24">
+  <div class="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-red/15 blur-3xl" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="inline-flex items-center rounded-full bg-navy/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-navy">Why Work With Us</span>
+      <h2 class="mt-5 font-heading text-3xl font-bold text-navy sm:text-4xl">Support That Goes Beyond the Job Offer</h2>
+      <p class="mt-4 leading-relaxed text-slate-700">Every FAHS placement comes with the same commitment: guidance from your first application through your first year on the job.</p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal hover-lift rounded-3xl glass-card p-7 text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10 text-navy">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 16.5v.01"/><path d="M5 5l14 14"/></svg>
+        </div>
+        <h3 class="mt-5 font-heading text-lg font-bold text-navy">No Cost to Candidates</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">Our placement, credentialing, and visa support services are always free &mdash; partner facilities cover our fees, not you.</p>
+      </div>
+
+      <div class="reveal delay-100 hover-lift rounded-3xl glass-card p-7 text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-red/10 text-red">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="12" r="2"/><path d="M14 10h4M14 14h4"/></svg>
+        </div>
+        <h3 class="mt-5 font-heading text-lg font-bold text-navy">Visa Sponsorship</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">Our in-house immigration team manages EB-3 and H-1B petitions from filing to approval alongside your employer.</p>
+      </div>
+
+      <div class="reveal delay-200 hover-lift rounded-3xl glass-card p-7 text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10 text-navy">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6"/><circle cx="12" cy="16.5" r="2.2"/><path d="M10.7 17.8L12 19l3-3"/></svg>
+        </div>
+        <h3 class="mt-5 font-heading text-lg font-bold text-navy">Credentialing Support</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">Guidance through NCLEX prep, CGFNS evaluation, and state licensure requirements, mapped to your background.</p>
+      </div>
+
+      <div class="reveal delay-300 hover-lift rounded-3xl glass-card p-7 text-center">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-red/10 text-red">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="mt-5 font-heading text-lg font-bold text-navy">Ongoing Support</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">A dedicated contact stays with you through your first year for workplace, housing, and community questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative overflow-hidden bg-navy py-20 sm:py-24">
+  <img src="https://images.unsplash.com/photo-1607838720191-0d8eba3e9040?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-30">
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-red/80" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -left-24 -top-24 h-96 w-96 rounded-full bg-sky/30 blur-3xl blob-float" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-red/30 blur-3xl blob-float" style="animation-delay:4s" aria-hidden="true"></div>
+
+  <div class="reveal relative mx-auto max-w-3xl px-5 text-center text-white sm:px-8 lg:px-10">
+    <span class="inline-flex items-center rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white">Don't See the Right Fit?</span>
+    <h2 class="mt-5 font-heading text-3xl font-bold sm:text-4xl">Apply Anyway &mdash; We'll Match You Personally</h2>
+    <p class="mt-5 leading-relaxed text-white/85">New roles from our partner hospitals, skilled nursing facilities, and home health agencies open every week. Submit your application once and a FAHS case manager will reach out with opportunities matched to your license, experience, and goals.</p>
+    <a href="apply-now.html" class="btn-press mt-8 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-navy shadow-lg shadow-black/20 cursor-pointer">
+      Apply Now
+      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="relative overflow-hidden bg-navy py-16 text-white">
+  <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-sky/20 blur-3xl" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-red/20 blur-3xl" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href="../concept-2-growth.html" class="flex items-center gap-3">
+      <span class="inline-block rounded-xl bg-white p-2 shadow-md">
+        <img src="../assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-9 w-auto">
+      </span>
+        </a>
+        <p class="mt-5 text-sm leading-relaxed text-white/70">Connecting skilled Filipino healthcare professionals with trusted employers across the United States.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on Facebook" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M13.5 8.5H15V6h-1.8C11.6 6 10.5 7.2 10.5 9v2H9v3h1.5v6h3v-6H15l.5-3h-2V9c0-.3.2-.5.5-.5z"/></svg>
+          </a>
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on Instagram" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4c0-1.5 1-2.5 2.5-2.5S16 11.5 16 13v4M11 10v7"/></svg>
+          </a>
+          <a href="#" aria-label="Fil-Am Healthcare Solutions on YouTube" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 cursor-pointer">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M10 9.5l6 2.5-6 2.5z" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="font-heading text-sm font-bold uppercase tracking-wide text-sky">Quick Links</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/75">
+          <li><a href="../concept-2-growth.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="meet-the-executive.html" class="hover:text-white">Meet the Executive</a></li>
+          <li><a href="resources.html" class="hover:text-white">Resources</a></li>
+          <li><a href="resources.html#job-fair" class="hover:text-white">Upcoming Job Fair</a></li>
+          <li><a href="employer-inquiry.html" class="hover:text-white">Employers</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-heading text-sm font-bold uppercase tracking-wide text-sky">Services</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/75">
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Nurse &amp; CNA Staffing</a></li>
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Caregiver Placement</a></li>
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Credentialing Support</a></li>
+          <li><a href="../concept-2-growth.html#services" class="hover:text-white">Visa &amp; Immigration</a></li>
+          <li><a href="healthcare-jobs.html" class="hover:text-white">Healthcare Jobs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-heading text-sm font-bold uppercase tracking-wide text-sky">Legal</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/75">
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/15 pt-8 text-center text-xs text-white/60">
+      <p>&copy; <span id="year"></span> Fil-Am Healthcare Solutions. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var navToggle = document.getElementById('nav-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var iconMenu = document.getElementById('icon-menu');
+  var iconClose = document.getElementById('icon-close');
+
+  function closeMobileMenu() {
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('menu-open');
+    mobileMenu.classList.add('menu-closed');
+    iconMenu.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  }
+
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeMobileMenu();
+    } else {
+      navToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.remove('menu-closed');
+      mobileMenu.classList.add('menu-open');
+      iconMenu.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+    }
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(function (link) {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length > 1) {
+        var target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 12) {
+      header.classList.remove('py-4', 'bg-white/70');
+      header.classList.add('py-2.5', 'bg-white/90', 'shadow-md', 'border-white/60');
+    } else {
+      header.classList.remove('py-2.5', 'bg-white/90', 'shadow-md', 'border-white/60');
+      header.classList.add('py-4', 'bg-white/70');
+    }
+  });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('revealed'); });
+  }
+
+  var pills = document.querySelectorAll('.filter-pill');
+  var jobCards = document.querySelectorAll('.job-card');
+  var noJobsMsg = document.getElementById('no-jobs');
+  var resultsCount = document.getElementById('results-count');
+  var searchInput = document.getElementById('job-search');
+  var stateSelect = document.getElementById('job-state');
+  var totalJobs = jobCards.length;
+
+  function activeFilter() {
+    var pressed = document.querySelector('.filter-pill[aria-pressed="true"]');
+    return pressed ? pressed.dataset.filter : 'all';
+  }
+
+  function applyFilters() {
+    var filter = activeFilter();
+    var stateVal = stateSelect.value;
+    var query = searchInput.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    jobCards.forEach(function (card) {
+      var matchesCategory = filter === 'all' || card.dataset.category === filter;
+      var matchesState = stateVal === 'all' || card.dataset.state === stateVal;
+      var matchesQuery = query === '' || card.dataset.search.indexOf(query) !== -1;
+      var show = matchesCategory && matchesState && matchesQuery;
+      card.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    noJobsMsg.classList.toggle('hidden', visibleCount !== 0);
+
+    if (visibleCount === totalJobs) {
+      resultsCount.textContent = 'Showing all ' + totalJobs + ' openings';
+    } else {
+      resultsCount.textContent = 'Showing ' + visibleCount + ' of ' + totalJobs + ' openings';
+    }
+  }
+
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      pills.forEach(function (p) { p.setAttribute('aria-pressed', 'false'); });
+      pill.setAttribute('aria-pressed', 'true');
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+  stateSelect.addEventListener('change', applyFilters);
+
+  document.getElementById('clear-filters').addEventListener('click', function () {
+    pills.forEach(function (p) { p.setAttribute('aria-pressed', p.dataset.filter === 'all' ? 'true' : 'false'); });
+    searchInput.value = '';
+    stateSelect.value = 'all';
+    applyFilters();
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
