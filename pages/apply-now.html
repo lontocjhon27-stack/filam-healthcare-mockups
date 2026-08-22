@@ -304,7 +304,9 @@
       <div class="reveal delay-100 lg:col-span-2">
         <form id="application-form" class="rounded-3xl glass-card p-7 sm:p-9" novalidate>
           <h3 class="font-heading text-xl font-bold text-navy">Candidate Application</h3>
-          <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+          <p class="mt-6 text-xs font-bold uppercase tracking-[0.14em] text-red">Personal Information</p>
+          <div class="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
               <label for="af-first" class="mb-1.5 block text-sm font-semibold text-slate-800">First Name</label>
               <input id="af-first" name="firstName" type="text" required autocomplete="given-name" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="Maria">
@@ -321,6 +323,14 @@
               <label for="af-phone" class="mb-1.5 block text-sm font-semibold text-slate-800">Phone</label>
               <input id="af-phone" name="phone" type="tel" required autocomplete="tel" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="(555) 123-4567">
             </div>
+            <div class="sm:col-span-2">
+              <label for="af-location" class="mb-1.5 block text-sm font-semibold text-slate-800">Current Location</label>
+              <input id="af-location" name="currentLocation" type="text" required autocomplete="address-level2" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="City, Country">
+            </div>
+          </div>
+
+          <p class="mt-8 text-xs font-bold uppercase tracking-[0.14em] text-red">Professional Background</p>
+          <div class="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
               <label for="af-profession" class="mb-1.5 block text-sm font-semibold text-slate-800">Profession</label>
               <select id="af-profession" name="profession" required class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900">
@@ -334,7 +344,11 @@
               </select>
             </div>
             <div>
-              <label for="af-experience" class="mb-1.5 block text-sm font-semibold text-slate-800">Experience (Years)</label>
+              <label for="af-specialty" class="mb-1.5 block text-sm font-semibold text-slate-800">Specialty</label>
+              <input id="af-specialty" name="specialty" type="text" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="e.g. ICU, Med-Surg, Oncology">
+            </div>
+            <div>
+              <label for="af-experience" class="mb-1.5 block text-sm font-semibold text-slate-800">Years of Experience</label>
               <select id="af-experience" name="experience" required class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900">
                 <option value="">Select range</option>
                 <option>Less than 1 year</option>
@@ -344,10 +358,49 @@
                 <option>10+ years</option>
               </select>
             </div>
+            <div>
+              <label for="af-nclex" class="mb-1.5 block text-sm font-semibold text-slate-800">NCLEX Status</label>
+              <select id="af-nclex" name="nclexStatus" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900">
+                <option value="">Select one</option>
+                <option>Not Applicable</option>
+                <option>Not Yet Taken</option>
+                <option>Scheduled</option>
+                <option>Passed</option>
+                <option>Did Not Pass</option>
+              </select>
+            </div>
             <div class="sm:col-span-2">
-              <label for="af-resume" class="mb-1.5 block text-sm font-semibold text-slate-800">Resume Upload</label>
+              <label for="af-education" class="mb-1.5 block text-sm font-semibold text-slate-800">Education</label>
+              <input id="af-education" name="education" type="text" required class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="Degree, school, and year graduated">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="af-license" class="mb-1.5 block text-sm font-semibold text-slate-800">License / Credentials</label>
+              <input id="af-license" name="license" type="text" required class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-4 py-2.5 text-slate-900 placeholder:text-slate-400" placeholder="License type, number, and issuing state/country">
+            </div>
+          </div>
+
+          <p class="mt-8 text-xs font-bold uppercase tracking-[0.14em] text-red">Document Uploads</p>
+          <p class="mt-1 text-xs text-slate-500">Accepted formats: PDF, DOC, DOCX, JPG, PNG.</p>
+          <div class="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div>
+              <label for="af-resume" class="mb-1.5 block text-sm font-semibold text-slate-800">Resume / CV</label>
               <input id="af-resume" name="resume" type="file" accept=".pdf,.doc,.docx" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-3 py-2 text-sm text-slate-700 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-navy file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-navy/90">
-              <p class="mt-1.5 text-xs text-slate-500">Accepted formats: PDF, DOC, DOCX.</p>
+            </div>
+            <div>
+              <label for="af-passport" class="mb-1.5 block text-sm font-semibold text-slate-800">Passport</label>
+              <input id="af-passport" name="passport" type="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-3 py-2 text-sm text-slate-700 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-navy file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-navy/90">
+            </div>
+            <div>
+              <label for="af-diploma" class="mb-1.5 block text-sm font-semibold text-slate-800">Diploma</label>
+              <input id="af-diploma" name="diploma" type="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-3 py-2 text-sm text-slate-700 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-navy file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-navy/90">
+            </div>
+            <div>
+              <label for="af-tor" class="mb-1.5 block text-sm font-semibold text-slate-800">Transcript of Records</label>
+              <input id="af-tor" name="transcriptOfRecords" type="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-3 py-2 text-sm text-slate-700 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-navy file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-navy/90">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="af-employment-cert" class="mb-1.5 block text-sm font-semibold text-slate-800">Employment Certificate</label>
+              <input id="af-employment-cert" name="employmentCertificate" type="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full min-h-[44px] rounded-xl border border-navy/15 bg-white/90 px-3 py-2 text-sm text-slate-700 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-navy file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-navy/90">
             </div>
           </div>
           <button type="submit" class="btn-press mt-7 inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-navy/30 cursor-pointer sm:w-auto">
