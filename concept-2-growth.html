@@ -74,10 +74,6 @@
   #mobile-menu.menu-closed { opacity: 0; transform: translateY(-8px); pointer-events: none; }
   #mobile-menu.menu-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
-  .testimonial-track { display: flex; transition: transform .6s cubic-bezier(.22,1,.36,1); }
-  @media (prefers-reduced-motion: reduce) { .testimonial-track { transition: none; } }
-  .testimonial-slide { flex: 0 0 100%; }
-
   .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s ease; }
   .faq-panel.open { grid-template-rows: 1fr; }
   .faq-panel-inner { overflow: hidden; }
@@ -710,69 +706,6 @@
   </div>
 </section>
 
-<section id="testimonials" class="relative overflow-hidden bg-stone-50 py-20 grain sm:py-24">
-  <div class="pointer-events-none absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-sky/15 blur-3xl" aria-hidden="true"></div>
-  <div class="relative mx-auto max-w-4xl px-5 sm:px-8 lg:px-10">
-    <div class="reveal text-center">
-      <span class="inline-flex items-center rounded-full bg-navy/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-navy">Testimonials</span>
-      <h2 class="mt-5 font-heading text-3xl font-bold text-navy sm:text-4xl">What Our Placed Professionals Say</h2>
-    </div>
-
-    <div id="testimonial-carousel" class="reveal delay-100 relative mt-12">
-      <div class="overflow-hidden rounded-3xl">
-        <div id="testimonial-track" class="testimonial-track">
-
-          <div class="testimonial-slide px-1">
-            <div class="rounded-3xl glass-card p-8 text-center sm:p-10">
-              <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-navy to-sky font-heading text-xl font-bold text-white shadow-md ring-4 ring-white" aria-hidden="true">MS</div>
-              <p class="mt-5 font-heading text-lg italic leading-relaxed text-slate-800">&ldquo;FAHS didn't just find me a job &mdash; they found me a career I'm proud of, in a hospital that feels like family.&rdquo;</p>
-              <p class="mt-4 text-sm font-bold text-navy">Maria Santos, RN</p>
-              <p class="text-xs font-semibold uppercase tracking-wide text-red">Harborview Regional Hospital &middot; Tampa, FL</p>
-            </div>
-          </div>
-
-          <div class="testimonial-slide px-1">
-            <div class="rounded-3xl glass-card p-8 text-center sm:p-10">
-              <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-red to-navy font-heading text-xl font-bold text-white shadow-md ring-4 ring-white" aria-hidden="true">JC</div>
-              <p class="mt-5 font-heading text-lg italic leading-relaxed text-slate-800">&ldquo;From my first interview to my first paycheck, someone was always just a phone call away.&rdquo;</p>
-              <p class="mt-4 text-sm font-bold text-navy">Jonalyn Cruz, Home Health Caregiver</p>
-              <p class="text-xs font-semibold uppercase tracking-wide text-red">Willow Creek Home Health &middot; Chicago, IL</p>
-            </div>
-          </div>
-
-          <div class="testimonial-slide px-1">
-            <div class="rounded-3xl glass-card p-8 text-center sm:p-10">
-              <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-navy to-red font-heading text-xl font-bold text-white shadow-md ring-4 ring-white" aria-hidden="true">MV</div>
-              <p class="mt-5 font-heading text-lg italic leading-relaxed text-slate-800">&ldquo;I never imagined I'd be a CNA in New Jersey two years after applying from Cebu. FAHS made it feel possible from day one.&rdquo;</p>
-              <p class="mt-4 text-sm font-bold text-navy">Mark Villanueva, CNA</p>
-              <p class="text-xs font-semibold uppercase tracking-wide text-red">Magnolia Springs Assisted Living &middot; Newark, NJ</p>
-            </div>
-          </div>
-
-          <div class="testimonial-slide px-1">
-            <div class="rounded-3xl glass-card p-8 text-center sm:p-10">
-              <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-sky to-navy font-heading text-xl font-bold text-white shadow-md ring-4 ring-white" aria-hidden="true">PR</div>
-              <p class="mt-5 font-heading text-lg italic leading-relaxed text-slate-800">&ldquo;The visa process was the part I feared most. FAHS's team handled it with more patience and clarity than I ever expected.&rdquo;</p>
-              <p class="mt-4 text-sm font-bold text-navy">Paolo Reyes, Allied Health Professional</p>
-              <p class="text-xs font-semibold uppercase tracking-wide text-red">Compass Rehabilitation Partners &middot; San Diego, CA</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <button id="t-prev" type="button" class="absolute left-0 top-1/2 flex h-11 w-11 -translate-x-3 -translate-y-1/2 items-center justify-center rounded-full glass-card text-navy shadow-md cursor-pointer sm:-translate-x-5" aria-label="Previous testimonial">
-        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button id="t-next" type="button" class="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 translate-x-3 items-center justify-center rounded-full glass-card text-navy shadow-md cursor-pointer sm:translate-x-5" aria-label="Next testimonial">
-        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </button>
-
-      <div id="testimonial-dots" class="mt-8 flex items-center justify-center gap-2.5" role="tablist" aria-label="Select testimonial"></div>
-    </div>
-  </div>
-</section>
-
 <section id="faq" class="relative overflow-hidden bg-white py-20 sm:py-24">
   <div class="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-red/10 blur-3xl" aria-hidden="true"></div>
   <div class="relative mx-auto max-w-3xl px-5 sm:px-8 lg:px-10">
@@ -1143,48 +1076,6 @@
   } else {
     counters.forEach(animateCounter);
   }
-
-  var track = document.getElementById('testimonial-track');
-  var slides = document.querySelectorAll('.testimonial-slide');
-  var dotsWrap = document.getElementById('testimonial-dots');
-  var index = 0;
-
-  slides.forEach(function (_, i) {
-    var dot = document.createElement('button');
-    dot.type = 'button';
-    dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-    dot.className = 'h-2.5 w-2.5 rounded-full transition-colors cursor-pointer ' + (i === 0 ? 'bg-navy' : 'bg-navy/20');
-    dot.addEventListener('click', function () { goTo(i); });
-    dotsWrap.appendChild(dot);
-  });
-
-  function goTo(i) {
-    index = (i + slides.length) % slides.length;
-    track.style.transform = 'translateX(-' + (index * 100) + '%)';
-    dotsWrap.querySelectorAll('button').forEach(function (dot, di) {
-      dot.setAttribute('aria-current', di === index ? 'true' : 'false');
-      dot.classList.toggle('bg-navy', di === index);
-      dot.classList.toggle('bg-navy/20', di !== index);
-    });
-  }
-
-  document.getElementById('t-prev').addEventListener('click', function () { goTo(index - 1); });
-  document.getElementById('t-next').addEventListener('click', function () { goTo(index + 1); });
-  goTo(0);
-
-  var autoplay;
-  function startAutoplay() {
-    if (reduceMotion) return;
-    stopAutoplay();
-    autoplay = setInterval(function () { goTo(index + 1); }, 7000);
-  }
-  function stopAutoplay() { clearInterval(autoplay); }
-  var carouselRegion = document.getElementById('testimonial-carousel');
-  carouselRegion.addEventListener('mouseenter', stopAutoplay);
-  carouselRegion.addEventListener('mouseleave', startAutoplay);
-  carouselRegion.addEventListener('focusin', stopAutoplay);
-  carouselRegion.addEventListener('focusout', startAutoplay);
-  startAutoplay();
 
   var pills = document.querySelectorAll('.filter-pill');
   var jobCards = document.querySelectorAll('.job-card');
