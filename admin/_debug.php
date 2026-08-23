@@ -6,6 +6,30 @@ error_reporting(E_ALL);
 header('Content-Type: text/plain');
 
 echo "PHP version: " . PHP_VERSION . "\n";
+echo "__FILE__: " . __FILE__ . "\n";
+echo "realpath up 4: " . realpath(__DIR__ . '/../../../../') . "\n\n";
+
+foreach ([
+    '/home/u536536872',
+    realpath(__DIR__ . '/../../../../'),
+    realpath(__DIR__ . '/../..'),
+    realpath(__DIR__ . '/../../..'),
+] as $dir) {
+    if ($dir === false || $dir === null) {
+        continue;
+    }
+    echo "Listing $dir:\n";
+    $entries = @scandir($dir);
+    if ($entries === false) {
+        echo "  (cannot read)\n";
+    } else {
+        foreach ($entries as $e) {
+            if ($e === '.' || $e === '..') continue;
+            echo "  - $e\n";
+        }
+    }
+    echo "\n";
+}
 
 $path = '/home/u536536872/secure-config.php';
 echo "Config file exists: " . (is_file($path) ? 'yes' : 'no') . "\n";
