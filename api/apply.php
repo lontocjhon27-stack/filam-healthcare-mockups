@@ -64,4 +64,18 @@ $stmt->execute([
     'employment_cert_path' => $certPath,
 ]);
 
+notify_admin(
+    "New Candidate Application - $firstName $lastName",
+    "New candidate application received.\n\n"
+    . "Name: $firstName $lastName\n"
+    . "Email: $email\n"
+    . "Phone: $phone\n"
+    . "Profession: $profession\n"
+    . "Specialty: $specialty\n"
+    . "Experience: $experience\n"
+    . "Current location: $location\n\n"
+    . "View in admin portal: https://admin.fahs.us/index.php",
+    $email
+);
+
 json_out(['ok' => true]);

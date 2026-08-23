@@ -29,4 +29,15 @@ $stmt->execute([
     'message' => $message,
 ]);
 
+notify_admin(
+    'New Contact Message - ' . ($subject !== '' ? $subject : 'General Inquiry'),
+    "New contact message received.\n\n"
+    . "Name: $name\n"
+    . "Email: $email\n"
+    . "Subject: $subject\n\n"
+    . "Message:\n$message\n\n"
+    . "View in admin portal: https://admin.fahs.us/index.php",
+    $email
+);
+
 json_out(['ok' => true]);

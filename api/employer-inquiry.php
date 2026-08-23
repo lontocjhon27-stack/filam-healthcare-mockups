@@ -33,4 +33,17 @@ $stmt->execute([
     'phone' => $phone,
 ]);
 
+notify_admin(
+    "New Employer Inquiry - $company",
+    "New employer inquiry received.\n\n"
+    . "Company: $company\n"
+    . "Position: $position\n"
+    . "Staff needed: $staff\n"
+    . "Location: $location\n"
+    . "Email: $email\n"
+    . "Phone: $phone\n\n"
+    . "View in admin portal: https://admin.fahs.us/index.php",
+    $email
+);
+
 json_out(['ok' => true]);
