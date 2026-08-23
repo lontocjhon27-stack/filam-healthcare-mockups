@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# /path/index.html -> /path/ (and root index.html -> /)
+RewriteCond %{THE_REQUEST} \s/+(.*)index\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# /path/page.html -> /path/page
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Serve the matching .html file for clean URLs, without a redirect
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
