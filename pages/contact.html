@@ -442,17 +442,44 @@
     revealEls.forEach(function (el) { el.classList.add('revealed'); });
   }
 
-  function wireForm(formId, successId) {
+  function wireForm(formId, successId, endpoint) {
     var form = document.getElementById(formId);
     var success = document.getElementById(successId);
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var errorBox = document.createElement('p');
+    errorBox.className = 'hidden mb-4 rounded-xl bg-red/10 px-4 py-2.5 text-sm font-semibold text-red';
+    form.insertBefore(errorBox, form.firstChild);
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      form.classList.add('hidden');
-      success.classList.remove('hidden');
-      success.focus();
+      errorBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      var originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending&hellip;';
+
+      fetch(endpoint, { method: 'POST', body: new FormData(form) })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          if (result.ok && result.data.ok) {
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+            success.focus();
+          } else {
+            errorBox.textContent = (result.data && result.data.error) || 'Something went wrong. Please try again.';
+            errorBox.classList.remove('hidden');
+          }
+        })
+        .catch(function () {
+          errorBox.textContent = 'Network error — please check your connection and try again.';
+          errorBox.classList.remove('hidden');
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
     });
   }
-  wireForm('contact-form', 'contact-success');
+  wireForm('contact-form', 'contact-success', '../api/contact.php');
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

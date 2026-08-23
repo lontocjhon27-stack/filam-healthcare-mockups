@@ -1,0 +1,5 @@
+# Never commit secrets — the real config lives outside this repo on the server.
+secure-config.php
+config.local.php
+.env
+*.env
