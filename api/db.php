@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 // Credentials live outside the git-deployed directory on purpose —
 // this repo is public, so no secret can ever be committed here.
-require_once '/home/u536536872/secure-config.php';
+require_once '/home/u536536872/domains/fahs.us/secure-config.php';
 
 function get_db(): PDO {
     static $pdo = null;

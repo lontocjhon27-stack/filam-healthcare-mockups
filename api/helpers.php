@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require_once '/home/u536536872/secure-config.php';
+require_once '/home/u536536872/domains/fahs.us/secure-config.php';
 
 const MAX_UPLOAD_BYTES = 8 * 1024 * 1024; // 8MB per file
 const ALLOWED_MIME = [

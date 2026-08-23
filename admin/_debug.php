@@ -31,7 +31,7 @@ foreach ([
     echo "\n";
 }
 
-$path = '/home/u536536872/secure-config.php';
+$path = '/home/u536536872/domains/fahs.us/secure-config.php';
 echo "Config file exists: " . (is_file($path) ? 'yes' : 'no') . "\n";
 echo "Config file readable: " . (is_readable($path) ? 'yes' : 'no') . "\n";
 
