@@ -69,7 +69,7 @@ $fileFields = [
 <header class="border-b border-slate-200 bg-white">
   <div class="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
     <a href="index.php" class="flex items-center gap-3 cursor-pointer">
-      <img src="../assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-10 w-auto">
+      <img src="https://fahs.us/assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-10 w-auto">
       <span class="font-sans text-lg font-bold text-navy">Admin Portal</span>
     </a>
     <a href="index.php" class="text-sm font-semibold text-navy cursor-pointer">&larr; Back to Dashboard</a>
