@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /database/
+Disallow: /proposal-presentation.html
+Disallow: /dashboard-mockup.html
+
+Sitemap: https://fahs.us/sitemap.xml
