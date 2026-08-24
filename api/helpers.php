@@ -41,13 +41,12 @@ function clean_email(?string $v): ?string {
  * Best-effort email alert to the team inbox. Never throws — a failed
  * notification must not block a submission that already saved to the DB.
  *
- * Sent via authenticated SMTP as careers@fahs.us itself (not PHP's mail()),
- * since fahs.us's SPF record only authorizes Microsoft's servers to send
- * as @fahs.us — mail() from Hostinger would fail SPF and get spam-filtered.
+ * Sent via Microsoft Graph (app-only) rather than SMTP, since the tenant's
+ * Security Defaults block basic SMTP auth entirely.
  */
 function notify_admin(string $subject, string $body, ?string $replyTo = null): void {
-    require_once __DIR__ . '/smtp.php';
-    @smtp_send('careers@fahs.us', $subject, $body, $replyTo);
+    require_once __DIR__ . '/graph_mail.php';
+    @graph_send_mail('careers@fahs.us', $subject, $body, $replyTo);
 }
 
 /**
