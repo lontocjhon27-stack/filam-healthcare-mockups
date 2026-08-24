@@ -41,7 +41,7 @@ function status_badge(string $status): string {
 <header class="border-b border-slate-200 bg-white">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
     <div class="flex items-center gap-3">
-      <img src="https://fahs.us/assets/logo.png" alt="Fil-Am Healthcare Solutions" class="h-10 w-auto">
+      <img src="https://fahs.us/assets/logo-v2.png" alt="Fil-Am Healthcare Solutions" class="h-10 w-auto">
       <span class="font-sans text-lg font-bold text-navy">Admin Portal</span>
     </div>
     <div class="flex items-center gap-4 text-sm">
