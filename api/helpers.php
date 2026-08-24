@@ -40,15 +40,14 @@ function clean_email(?string $v): ?string {
 /**
  * Best-effort email alert to the team inbox. Never throws — a failed
  * notification must not block a submission that already saved to the DB.
+ *
+ * Sent via authenticated SMTP as careers@fahs.us itself (not PHP's mail()),
+ * since fahs.us's SPF record only authorizes Microsoft's servers to send
+ * as @fahs.us — mail() from Hostinger would fail SPF and get spam-filtered.
  */
 function notify_admin(string $subject, string $body, ?string $replyTo = null): void {
-    $to = 'careers@fahs.us';
-    $headers = "From: Fil-Am Healthcare Solutions <no-reply@fahs.us>\r\n"
-        . "Content-Type: text/plain; charset=UTF-8\r\n";
-    if ($replyTo !== null) {
-        $headers .= "Reply-To: $replyTo\r\n";
-    }
-    @mail($to, $subject, $body, $headers);
+    require_once __DIR__ . '/smtp.php';
+    @smtp_send('careers@fahs.us', $subject, $body, $replyTo);
 }
 
 /**
