@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="flex min-h-screen items-center justify-center bg-stone-50 px-5">
   <div class="w-full max-w-sm rounded-3xl bg-white p-8 shadow-xl ring-1 ring-slate-100">
-    <img src="https://fahs.us/assets/logo.png" alt="Fil-Am Healthcare Solutions" class="mx-auto h-14 w-auto">
+    <img src="https://fahs.us/assets/logo.png" alt="Fil-Am Healthcare Solutions" class="mx-auto h-24 w-auto">
     <h1 class="mt-6 text-center font-sans text-xl font-bold text-navy">Admin Login</h1>
     <p class="mt-1 text-center text-sm text-slate-500">Internal team access only.</p>
 
