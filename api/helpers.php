@@ -42,7 +42,7 @@ function clean_email(?string $v): ?string {
  * notification must not block a submission that already saved to the DB.
  */
 function notify_admin(string $subject, string $body, ?string $replyTo = null): void {
-    $to = 'support@fahs.us';
+    $to = 'careers@fahs.us';
     $headers = "From: Fil-Am Healthcare Solutions <no-reply@fahs.us>\r\n"
         . "Content-Type: text/plain; charset=UTF-8\r\n";
     if ($replyTo !== null) {
