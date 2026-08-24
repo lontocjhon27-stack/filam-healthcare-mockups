@@ -17,7 +17,10 @@ function graph_send_mail(string $to, string $subject, string $body, ?string $rep
         return false;
     }
 
-    $mailbox = defined('SMTP_USER') ? SMTP_USER : 'careers@fahs.us';
+    // Sends AS the shared "FAHS Submissions" mailbox so that's the display
+    // name recipients see — separate from careers@fahs.us, which stays
+    // Geoffrey's personal identity for replying to candidates/employers.
+    $mailbox = 'submissions@fahs.us';
 
     $message = [
         'message' => [
